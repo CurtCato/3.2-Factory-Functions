@@ -70,33 +70,50 @@ let artistInfo = [
   }
 ];
 
+// Using one factory function to create artists
 const createArtist = (name, genre, age) => ({
   artistName: name,
   artistGenre: genre,
   artistAge: age
 });
 
-// artistInfo.forEach(person => {
-//     if (person.artistGenre === "Pop") {
-//         polar.push("Name: " + person.artistName + ", Age: " + person.artistAge)
-//     } else if (person.artistGenre === "Rap" || "Funk") {
-//         jumpStop.push("Name: " + person.artistName + ", Age: " + person.artistAge)
-//     } else if (person.artistGenre === "Country" || "Bluegrass") {
-//         chatten.push("Name: " + person.artistName + ", Age: " + person.artistAge)
-//     }
-// })
+let bruceAtikins = createArtist("Bruce Atikins", "Country", 23)
+chatten.push(bruceAtikins)
 
-artistInfo.forEach(obj => {
-  if (obj.artistGenre === "Pop") {
-    polar.push(obj);
-  } 
-  else if (obj.artistGenre === "Rap" || obj.artistGenre === "Funk") { 
-   jumpStop.push(obj);
-  } 
-  else {
-      chatten.push(obj) 
-  }
-});
+let jensenBrown = createArtist("Jensen Brown", "Pop", 20)
+polar.push(bruceAtikins)
+
+let dreFunkz = createArtist("Dre Funkz", "Funk", 25)
+jumpStop.push(dreFunkz)
+
+let busta = createArtist("Busta Grimes", "Rap", 21)
+jumpStop.push(busta)
+
+let bart = createArtist("Barthalomew Danielson", "Bluegrass", 23)
+chatten.push(bart)
+
+let avil = createArtist("Avilee Dallas", "Country", 19)
+chatten.push(avil)
+
+let austin = createArtist("Austin Kinkaid", "Pop", 27)
+polar.push(austin)
+
+let loy = createArtist("Loyonce Branis", "Rap", 27)
+jumpStop.push(loy)
+
+// Used a for each loop instead of factory functions here
+
+// artistInfo.forEach(obj => {
+//   if (obj.artistGenre === "Pop") {
+//     polar.push(obj);
+//   } 
+//   else if (obj.artistGenre === "Rap" || obj.artistGenre === "Funk") { 
+//    jumpStop.push(obj);
+//   } 
+//   else {
+//       chatten.push(obj) 
+//   }
+// });
 
 console.log(chatten)
 console.log(jumpStop)
